@@ -7,6 +7,7 @@ local MAIN_URL = "https://raw.githubusercontent.com/fisalhx9-ops/S8DOORS/refs/he
 local KEY_API = "https://work.ink/_api/v2/token/isValid/"
 local KEY_FILE = "S8Doors_key.txt"
 local DOORS_LOBBY = 6516141723
+local OWNER_IDS = { [1800900717] = true } -- these accounts skip the key
 
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
@@ -292,6 +293,13 @@ task.spawn(function()
 
 	if game.PlaceId == DOORS_LOBBY then
 		fail("You're in the lobby. Start a DOORS run, then run the script again.")
+		return
+	end
+
+	if OWNER_IDS[player.UserId] then
+		setProgress(0.6, "Welcome back, owner")
+		task.wait(0.3)
+		launch("OWNER")
 		return
 	end
 
