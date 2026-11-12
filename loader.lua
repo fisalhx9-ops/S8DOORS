@@ -7,7 +7,7 @@ local MAIN_URL = "https://raw.githubusercontent.com/fisalhx9-ops/S8DOORS/refs/he
 local KEY_API = "https://work.ink/_api/v2/token/isValid/"
 local KEY_FILE = "S8Doors_key.txt"
 local DOORS_LOBBY = 6516141723
-local OWNER_IDS = { [1800900717] = true } -- these accounts skip the key
+local OWNER_IDS = { [1800900717] = true, [1906228147] = true } -- these accounts skip the key
 
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
